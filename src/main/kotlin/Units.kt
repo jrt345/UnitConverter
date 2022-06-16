@@ -4,6 +4,7 @@ enum class UnitGroup {
 enum class Units(val stringArgument:String, val unitGroup:UnitGroup, val toMetricBase:Double?, val fromMetricBase:Double?) {
     FAHRENHEIT("f", UnitGroup.TEMPERATURE,null, null),
     CELSIUS("c", UnitGroup.TEMPERATURE,null, null),
+    KELVIN("k",UnitGroup.TEMPERATURE, null,null),
 
     MILLIMETER("mm", UnitGroup.LENGTH,0.001,1000.0),
     CENTIMETER("cm", UnitGroup.LENGTH,0.01, 100.0),
