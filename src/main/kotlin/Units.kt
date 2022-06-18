@@ -2,9 +2,9 @@ enum class UnitGroup {
     TEMPERATURE, LENGTH, AREA, VOLUME, MASS
 }
 enum class Units(val stringArgument:String, val unitGroup:UnitGroup, val toMetricBase:Double?, val fromMetricBase:Double?) {
-    FAHRENHEIT("f", UnitGroup.TEMPERATURE,null, null),
-    CELSIUS("c", UnitGroup.TEMPERATURE,null, null),
-    KELVIN("k",UnitGroup.TEMPERATURE, null,null),
+    FAHRENHEIT("F", UnitGroup.TEMPERATURE,null, null),
+    CELSIUS("C", UnitGroup.TEMPERATURE,null, null),
+    KELVIN("K",UnitGroup.TEMPERATURE, null,null),
 
     MILLIMETER("mm", UnitGroup.LENGTH,0.001,1000.0),
     CENTIMETER("cm", UnitGroup.LENGTH,0.01, 100.0),
@@ -38,14 +38,14 @@ enum class Units(val stringArgument:String, val unitGroup:UnitGroup, val toMetri
     US_GALLON("gal", UnitGroup.VOLUME,0.0037854118, 264.17205236),
     US_QUART("qt", UnitGroup.VOLUME,0.0009463529, 1056.6882094),
     US_PINT("pt", UnitGroup.VOLUME,0.0004731765, 2113.3764189),
-    US_CUP("cup", UnitGroup.VOLUME,0.0002365882, 4226.7528377),
+    US_CUP("c", UnitGroup.VOLUME,0.0002365882, 4226.7528377),
     US_FLUID_OUNCE("floz", UnitGroup.VOLUME,0.0000295735, 33814.022702),
     US_TABLESPOON("tbsp", UnitGroup.VOLUME,0.0000147868, 67628.045404),
     US_TEASPOON("tsp", UnitGroup.VOLUME,0.0000049289, 202884.13621),
     IMPERIAL_GALLON("impgal", UnitGroup.VOLUME,0.00454609, 219.9692483),
     IMPERIAL_QUART("impqt", UnitGroup.VOLUME,0.0011365225, 879.8769932),
     IMPERIAL_PINT("imppt", UnitGroup.VOLUME,0.0005682613, 1759.7539864),
-    IMPERIAL_CUP("impcup", UnitGroup.VOLUME,0.0002841306, 3519.5079728),
+    IMPERIAL_CUP("impc", UnitGroup.VOLUME,0.0002841306, 3519.5079728),
     IMPERIAL_FLUID_OUNCE("impfloz", UnitGroup.VOLUME,0.0000284131, 35195.079728),
     IMPERIAL_TABLESPOON("imptbsp", UnitGroup.VOLUME,0.0000177582, 56312.127565),
     IMPERIAL_TEASPOON("imptsp", UnitGroup.VOLUME,0.0000059194, 168936.38269),
@@ -60,7 +60,4 @@ enum class Units(val stringArgument:String, val unitGroup:UnitGroup, val toMetri
     UK_TON("impton", UnitGroup.MASS,1016046.9088, 0.0000009842065276),
     US_STONE("st", UnitGroup.MASS,5669.904625, 0.0001763698),
     UK_STONE("impst", UnitGroup.MASS,6350.29318, 0.000157473),
-
-
-
 }
