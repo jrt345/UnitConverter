@@ -99,11 +99,11 @@ class UnitConverter {
             val valueToMetricBase:Double = value * (unitFrom?.toMetricBase ?: 0.0)
             val metricBaseValueToUnit:Double = valueToMetricBase * (unitTo?.fromMetricBase ?: 0.0)
 
-            var df = DecimalFormat("")
+            var df = DecimalFormat("0")
             var output = BigDecimal(0)
 
             if (metricBaseValueToUnit > 1000000.0){
-                println((metricBaseValueToUnit.toBigDecimal().setScale(0, RoundingMode.HALF_UP)))
+                output = (metricBaseValueToUnit.toBigDecimal().setScale(0, RoundingMode.HALF_UP))
             }
             else if (metricBaseValueToUnit > 100000.0){
                 df = DecimalFormat("0.#")
