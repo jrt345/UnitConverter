@@ -9,7 +9,7 @@ class Commands {
 
             when (commandArguments[0].lowercase()) {
                 "cvt" -> runUnitConverter(inputString, commandArguments)
-                "help" -> runHelp()
+                "help" -> runHelp(inputString, commandArguments)
                 "about" -> runAboutSection()
                 "chkupd" -> checkForUpdates()
                 else -> {
@@ -29,8 +29,13 @@ class Commands {
             }
         }
 
-        private fun runHelp() {
-
+        private fun runHelp(inputString:String, arguments:Array<String>) {
+            if (arguments.size == 1) {
+                HelpCommand.start()
+            } else {
+                println("Error: '$inputString' command invalid\n" +
+                        "Type 'help'")
+            }
         }
 
         private fun runAboutSection() {
