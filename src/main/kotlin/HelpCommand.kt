@@ -28,16 +28,15 @@ class HelpCommand {
             while (true) {
                 println("Type the number of one of the following options to learn more about:\n" +
                         "[1]Cvt command\n" +
-                        "[2]About command\n" +
-                        "[3]Chkupd command\n" +
-                        "[4]Exit help menu")
+                        "[2]Chkupd command\n" +
+                        "[3]Exit help menu")
 
                 val stringInput:String = readln()
 
                 try {
                     when (val intInput = stringInput.toInt()) {
                         1 -> runCvtCommandHelp()
-                        4 -> {
+                        3 -> {
                             println("Exited help menu, you may type a command now:")
                             break
                         }
