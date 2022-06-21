@@ -24,6 +24,11 @@ class HelpCommand {
                     "Area:  'mg', 'g', 'kg', 't', 'lb', 'oz', 'ton', 'impton', 'st', 'impst'\n")
         }
 
+        private fun runChkupdCommandHelp() {
+            println("Chkupd command:\n" +
+                    "The 'chkudp' command stands for check update, and will check for any available updates for UnitConverter.\n")
+        }
+
         fun start() {
             while (true) {
                 println("Type the number of one of the following options to learn more about:\n" +
@@ -36,6 +41,7 @@ class HelpCommand {
                 try {
                     when (val intInput = stringInput.toInt()) {
                         1 -> runCvtCommandHelp()
+                        2 -> runChkupdCommandHelp()
                         3 -> {
                             println("Exited help menu, you may type a command now:")
                             break
