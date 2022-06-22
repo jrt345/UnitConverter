@@ -17,11 +17,11 @@ class HelpCommand {
                     "Available units:\n" +
                     "Temperature: 'F', 'C', 'K;\n\n" +
                     "Length: 'mm', 'cm', 'm', 'km', 'in', 'ft', 'yd', 'mi'\n\n" +
-                    "Area: ac, 'mm2', 'cm2', 'm2', 'ha', 'km2', 'in2', 'ft2', 'yd2', 'mi2'\n\n" +
+                    "Area: 'ac', 'mm2', 'cm2', 'm2', 'ha', 'km2', 'in2', 'ft2', 'yd2', 'mi2'\n\n" +
                     "Volume: 'mm3', 'ml', 'l', 'm3', 'km3', 'in3', 'ft3', 'yd3', 'mi3',\n" +
                     "'gal', 'qt', 'pt', 'c', 'floz', 'tbsp', 'tsp', 'impgal', 'impqt',\n" +
                     "'imppt', 'impc', 'impfloz', 'imptbsp', 'imptsp'\n\n" +
-                    "Area:  'mg', 'g', 'kg', 't', 'lb', 'oz', 'ton', 'impton', 'st', 'impst'\n")
+                    "Area: 'mg', 'g', 'kg', 't', 'lb', 'oz', 'ton', 'impton', 'st', 'impst'\n")
         }
 
         private fun runChkupdCommandHelp() {
