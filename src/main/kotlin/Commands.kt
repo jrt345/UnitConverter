@@ -10,8 +10,8 @@ class Commands {
             when (commandArguments[0].lowercase()) {
                 "cvt" -> runUnitConverter(inputString, commandArguments)
                 "help" -> runHelp(inputString, commandArguments)
-                "about" -> runAboutSection()
-                "chkupd" -> checkForUpdates()
+                "about" -> runAboutSection(inputString, commandArguments)
+                "chkupd" -> checkForUpdates(inputString, commandArguments)
                 else -> {
                     println("'${commandArguments[0]}' is an invalid command\n\n" +
                             "Available commands:\n" +
@@ -38,15 +38,31 @@ class Commands {
             }
         }
 
-        private fun runAboutSection() {
-            println("About UnitConverter: Version 1.0 \n" +
-                    "Built in Kotlin 1.7.0 \n" +
-                    "Copyright © 2022 jrt345. All rights reserved. \n" +
-                    "UnitConverter is licensed under the GNU General Public License v3.0")
+        private fun runAboutSection(inputString:String, arguments:Array<String>) {
+            if (arguments.size == 1) {
+                println("About UnitConverter: Version 1.0\n" +
+                        "Built in Kotlin 1.7.0\n" +
+                        "Copyright © 2022 jrt345. All rights reserved.\n" +
+                        "UnitConverter is licensed under the GNU General Public License v3.0")
+            } else {
+                println("Error: '$inputString' command invalid.\n" +
+                        "Type 'about'")
+            }
         }
 
-        private fun checkForUpdates() {
-
+        private fun checkForUpdates(inputString:String, arguments:Array<String>) {
+            if (arguments.size == 1) {
+                if (UpdateChecker.isUpdateAvailable()) {
+                    println("A new version of UnitConverter has been released.\n" +
+                            "Version ${UpdateChecker.getLatestVersion()} is available at:\n" +
+                            "https://github.com/jrt345/UnitConverter/releases/latest\n")
+                } else {
+                    println("There are no new updates.")
+                }
+            } else {
+                println("Error: '$inputString' command invalid.\n" +
+                        "Type 'chkupd'")
+            }
         }
     }
 }
