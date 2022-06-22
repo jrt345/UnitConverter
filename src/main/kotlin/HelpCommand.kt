@@ -5,9 +5,9 @@ class HelpCommand {
                     "The 'cvt' command stands for convert, and is the main feature of UnitConverter.\n" +
                     "UnitConverter can convert common units of temperature, length, area, volume, and mass.\n\n" +
                     "The syntax of the command is: cvt <<val><unit1>> <unit2>\n" +
-                    "val indicates the value of the unit you want to convert\n" +
-                    "unit1 is the abbreviation of val's unit\n" +
-                    "unit2 is the abbreviation of the unit to convert val's unit to\n\n" +
+                    "val indicates the value of the unit you want to convert.\n" +
+                    "unit1 is the abbreviation of val's unit.\n" +
+                    "unit2 is the abbreviation of the unit to convert val's unit to.\n\n" +
                     "Examples:\n" +
                     "'cvt 95F C' -> 35 C\n" +
                     "'cvt 1ft cm' -> 30.48 cm\n" +
@@ -47,11 +47,11 @@ class HelpCommand {
                             break
                         }
                         else -> {
-                            println("'$intInput' is out of range, try again")
+                            println("'$intInput' is out of range, try again.")
                         }
                     }
                 } catch (e: NumberFormatException) {
-                    println("'$stringInput' is an invalid option, try again")
+                    println("'$stringInput' is an invalid option, try again.")
                 }
             }
         }

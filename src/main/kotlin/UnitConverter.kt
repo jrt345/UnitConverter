@@ -150,16 +150,16 @@ class UnitConverter {
 
         private fun printCommandErrors(stringValue:String, unitFrom:Units?, unitTo:Units?, arguments: Array<String>) {
             if(!(stringValue.contains("(\\d)".toRegex()))){
-                println(("Error:'${arguments[1]}': is an invalid argument, unknown value"))
+                println(("Error:'${arguments[1]}': is an invalid argument, unknown value."))
             }
             if (unitFrom == null) {
-                println(("Error:'${arguments[1]}': is an invalid argument, unknown unit"))
+                println(("Error:'${arguments[1]}': is an invalid argument, unknown unit."))
             }
             if (unitTo == null) {
-                println(("Error:'${arguments[2]}': is an invalid argument, unknown unit"))
+                println(("Error:'${arguments[2]}': is an invalid argument, unknown unit."))
             }
             if ((unitFrom?.unitGroup != unitTo?.unitGroup) && (unitFrom != null && unitTo != null)) {
-                println(("Error: can not convert ${unitFrom.unitGroup.toString().lowercase()} '${unitFrom.stringArgument}' to ${unitTo.unitGroup.toString().lowercase()} '${unitTo.stringArgument}'"))
+                println(("Error: can not convert ${unitFrom.unitGroup.toString().lowercase()} '${unitFrom.stringArgument}' to ${unitTo.unitGroup.toString().lowercase()} '${unitTo.stringArgument}'."))
             }
         }
 

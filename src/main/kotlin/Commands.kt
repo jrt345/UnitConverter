@@ -13,7 +13,7 @@ class Commands {
                 "about" -> runAboutSection(inputString, commandArguments)
                 "chkupd" -> checkForUpdates(inputString, commandArguments)
                 else -> {
-                    println("'${commandArguments[0]}' is an invalid command\n\n" +
+                    println("'${commandArguments[0]}' is an invalid command.\n\n" +
                             "Available commands:\n" +
                             "'cvt', 'help', 'about', 'chkupd'")
                 }
@@ -24,7 +24,7 @@ class Commands {
             if (arguments.size == 3) {
                 UnitConverter.start(arguments)
             } else {
-                println("Error: '$inputString' command invalid \n" +
+                println("Error: '$inputString' command invalid.\n" +
                         "cvt command syntax: cvt <<val><unit1>> <unit2>")
             }
         }
@@ -33,7 +33,7 @@ class Commands {
             if (arguments.size == 1) {
                 HelpCommand.start()
             } else {
-                println("Error: '$inputString' command invalid\n" +
+                println("Error: '$inputString' command invalid.\n" +
                         "Type 'help'")
             }
         }
