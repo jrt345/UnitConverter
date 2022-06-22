@@ -4,20 +4,20 @@ import java.io.InputStreamReader
 import java.net.URL
 
 class UpdateChecker {
-    companion object{
+    companion object {
         private const val stringCurrentVersion = "1.0.0"
 
-        //Gets the latest version of UnitConverter (as a string) from the GitHub repository
+        //Gets the latest version of UnitConverter from the GitHub repository
         fun getLatestVersion(): String? {
             return try {
                 /*Link to README.md; containing a comment "<!--Version-MAJOR.MINOR.PATCH-->"
                  * in line 1; stating the latest version of the GitHub repository*/
                 val latestVersion = URL("https://raw.githubusercontent.com/jrt345/UnitConverter/master/README.md")
                 val gitHub = latestVersion.openConnection()
-                val `in` = BufferedReader(InputStreamReader(gitHub.getInputStream()))
+                val bufferedReader = BufferedReader(InputStreamReader(gitHub.getInputStream()))
 
                 //Converts the first line of README.md into a version string
-                `in`.readLine().replace("<".toRegex(), "")
+                bufferedReader.readLine().replace("<".toRegex(), "")
                     .replace("!".toRegex(), "")
                     .replace("-".toRegex(), "")
                     .replace("Version".toRegex(), "")
@@ -34,12 +34,8 @@ class UpdateChecker {
                 val stringLatestVersion = getLatestVersion()
 
                 //Turn version strings into an array of version increments (MAJOR.MINOR.PATCH)
-                val stringCurrentVersionIncrements: Array<String> =
-                    stringCurrentVersion.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }
-                        .toTypedArray()
-                val latestVersionStringIncrements =
-                    stringLatestVersion!!.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }
-                        .toTypedArray()
+                val stringCurrentVersionIncrements: Array<String> = stringCurrentVersion.split("\\.".toRegex()).toTypedArray()
+                val stringLatestVersionIncrements: Array<String> = stringLatestVersion!!.split("\\.".toRegex()).toTypedArray()
 
                 /*int arrays of the current and latest version increments
                  * Array index key: 0 = MAJOR, 1 = MINOR, 2 = PATCH*/
@@ -49,7 +45,7 @@ class UpdateChecker {
                 //Convert version increments into int arrays
                 for (i in 0..2) {
                     currentVersionNumericalIncrements[i] = stringCurrentVersionIncrements[i].toInt()
-                    latestVersionNumericalIncrements[i] = latestVersionStringIncrements[i].toInt()
+                    latestVersionNumericalIncrements[i] = stringLatestVersionIncrements[i].toInt()
                 }
 
                 /*Compares current and latest MAJOR MINOR and PATCH versions and if any
