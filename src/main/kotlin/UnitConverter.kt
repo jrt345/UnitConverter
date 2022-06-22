@@ -2,7 +2,6 @@ import java.math.BigDecimal
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
-
 class UnitConverter {
     companion object {
         private fun getStringValueFromArgument(argument:String):String {

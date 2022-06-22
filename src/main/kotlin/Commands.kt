@@ -55,7 +55,7 @@ class Commands {
                 if (UpdateChecker.isUpdateAvailable()) {
                     println("A new version of UnitConverter has been released.\n" +
                             "Version ${UpdateChecker.getLatestVersion()} is available at:\n" +
-                            "https://github.com/jrt345/UnitConverter/releases/latest\n")
+                            "https://github.com/jrt345/UnitConverter/releases/latest")
                 } else {
                     println("There are no new updates.")
                 }

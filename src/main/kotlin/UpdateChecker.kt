@@ -5,7 +5,7 @@ import java.net.URL
 
 class UpdateChecker {
     companion object {
-        private const val stringCurrentVersion = "1.0.0"
+        private const val stringCurrentVersion = "-1.0.0"
 
         //Gets the latest version of UnitConverter from the GitHub repository
         fun getLatestVersion(): String? {
