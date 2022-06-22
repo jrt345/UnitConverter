@@ -8,7 +8,7 @@ class UpdateChecker {
         private const val stringCurrentVersion = "1.0.0"
 
         //Gets the latest version of UnitConverter (as a string) from the GitHub repository
-        private fun getLatestVersion(): String? {
+        fun getLatestVersion(): String? {
             return try {
                 /*Link to README.md; containing a comment "<!--Version-MAJOR.MINOR.PATCH-->"
                  * in line 1; stating the latest version of the GitHub repository*/
