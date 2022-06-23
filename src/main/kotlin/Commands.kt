@@ -42,7 +42,7 @@ class Commands {
             if (arguments.size == 1) {
                 println("About UnitConverter: Version 1.0\n" +
                         "Built in Kotlin 1.7.0\n" +
-                        "Copyright © 2022 jrt345. All rights reserved.\n" +
+                        "Copyright 2022 jrt345. All rights reserved.\n" +
                         "UnitConverter is licensed under the GNU General Public License v3.0")
             } else {
                 println("Error: '$inputString' command invalid.\n" +

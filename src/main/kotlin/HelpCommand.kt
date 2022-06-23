@@ -2,7 +2,7 @@ class HelpCommand {
     companion object {
         private fun runCvtCommandHelp() {
             println("Cvt command:\n" +
-                    "The 'cvt' command stands for convert, and is the main feature of UnitConverter.\n" +
+                    "The 'cvt' command stands for convert and is the main feature of UnitConverter.\n" +
                     "UnitConverter can convert common units of temperature, length, area, volume, and mass.\n\n" +
                     "The syntax of the command is: cvt <<val><unit1>> <unit2>\n" +
                     "val indicates the value of the unit you want to convert.\n" +
@@ -15,7 +15,7 @@ class HelpCommand {
                     "'cvt 500ml l' -> 0.5 l\n" +
                     "'cvt 1lb kg' -> 0.4536 kg\n\n" +
                     "Available units:\n" +
-                    "Temperature: 'F', 'C', 'K;\n\n" +
+                    "Temperature: 'F', 'C', 'K\n\n" +
                     "Length: 'mm', 'cm', 'm', 'km', 'in', 'ft', 'yd', 'mi'\n\n" +
                     "Area: 'ac', 'mm2', 'cm2', 'm2', 'ha', 'km2', 'in2', 'ft2', 'yd2', 'mi2'\n\n" +
                     "Volume: 'mm3', 'ml', 'l', 'm3', 'km3', 'in3', 'ft3', 'yd3', 'mi3',\n" +
